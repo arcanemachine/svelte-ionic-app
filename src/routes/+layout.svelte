@@ -4,7 +4,7 @@
 
 	import { pwaStatusStream, type PWAStatus } from '$lib/services/pwa';
 
-	import Menu from '$lib/components/Menu.svelte';
+	// import Menu from '$lib/components/Menu.svelte';
 
 	import { setupIonicSvelte } from '$ionic/svelte';
 
@@ -31,10 +31,13 @@
 </script>
 
 <ion-app>
-	<ion-split-pane content-id="main">
-		<Menu />
-		<div class="ion-page" id="main">
-			<slot />
-		</div>
-	</ion-split-pane>
+	<ion-header>
+		<ion-toolbar>
+			<ion-title>Hello Ionic!</ion-title>
+		</ion-toolbar>
+	</ion-header>
+
+	<ion-content class="ion-padding">
+		<slot />
+	</ion-content>
 </ion-app>
